@@ -1,0 +1,53 @@
+<table class="table table-sm">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Nombre</th>
+      <th scope="col">Precio</th>
+      <!-- <th scope="col">Cantidad</th> -->
+      <!-- <th scope="col">Agregar/Eliminar</th> -->
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of dataMenuAdd; index as i">
+      <th scope="row">{{ i + 1 }}</th>
+      <td>{{ item.name }}</td>
+      <td><span>Q.</span>{{ item.price }}</td>
+      <!-- <td>{{ item.items }}</td> -->
+      <!-- <td>
+        <i class="fa-solid fa-square-plus" (click)="incrementItems(item)"></i>
+        <i class="fa-solid fa-square-minus" (click)="decrementItems(item)"></i>
+      </td> -->
+      <td>
+        <i class="fa-solid fa-trash" (click)="deleteItems(item)"></i>
+      </td>
+    </tr>
+    <tr>
+      <td>Total</td>
+      <td>{{ totalPayment }}</td>
+    </tr>
+    <!-- <tr>
+      <th scope="row">2</th>
+      <td>Jacob</td>
+      <td>Thornton</td>
+      <td>Otto</td>
+      <td>@fat</td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td colspan="2">Larry the Bird</td>
+      <td>@twitter</td>
+      <td>@twitter</td>
+    </tr> -->
+  </tbody>
+</table>
+
+<button
+  type="button"
+  class="btn btn-primary"
+  (click)="priceTotal()"
+  routerLink="/payment-form"
+>
+  Submit
+  <!-- <a routerLink="/payment-form"></a> -->
+</button>

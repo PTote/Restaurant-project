@@ -1,0 +1,56 @@
+[
+  {
+    "id": 1,
+    "name": "Ensalada Cesar",
+    "avatar": "../../assets/images/healthy food.jpg",
+    "price": 35.0,
+    "description": "Una ensalada de lechuga romana y croûtons con jugo de limón, aceite de oliva, huevo, salsa Worcestershire, anchoas, ajo, mostaza de Dijon, queso parmesano y pimienta negra. La ensalada César original no contiene pollo, aunque se le suele agregar habitualmente.",
+    "image": "../../assets/images/Ensalada cesar.jpg",
+    "items": 1
+  },
+  {
+    "id": 2,
+    "name": "Ensalada Caprese",
+    "price": 40.0,
+    "avatar": "../../assets/images/vegan food.jpg",
+    "description": "Una ensalada italiana compuesta de rodajas de tomate y de mozzarella fresca, y hojas de albahaca fresca, de la variedad hoja grande y superhoja, regado con aceite de oliva.",
+    "image": "../../assets/images/ensalada caprese.jpg",
+    "items": 1
+  },
+  {
+    "id": 3,
+    "name": "Ensalada de vegetales y nueces",
+    "avatar": "../../assets/images/vegan food.jpg",
+    "price": 38.0,
+    "description": "Una ensalada fresca, diferente y muy nutritiva, donde los sabores vegetales combinan en perfecta armonía con el de las nueces (los frutos secos son ideales para este tipo de preparaciones) y un queso intenso, como lo es el azul.",
+    "image": "../../assets/images/Ensalada de Vegetales y Nueces.jpg",
+    "items": 1
+  },
+  {
+    "id": 4,
+    "name": "Ensalada Latina",
+    "price": 45.0,
+    "avatar": "../../assets/images/healthy food.jpg",
+    "description": "Una ensalada hecha a base de frescos vegetales, frejol, aguacate y queso, en la que puedes elegir tu aderezo favorito Ranch o vinagreta. Además de poder ofrecerle a nuestro cuerpo una gran cantidad de vitaminas, minerales y fibra.",
+    "image": "../../assets/images/Ensalada latina.jpg",
+    "items": 1
+  },
+  {
+    "id": 5,
+    "name": "Ensalada de Zanahoria",
+    "price": 25.0,
+    "avatar": "../../assets/images/vegan food.jpg",
+    "description": "Una ensalada hecha a base de zanahoria acompañada de nueces, pasas y aceite de oliva. Contiene un alto contenido en fibra ayuda a prevenir problemas con el estreñimiento. Además, calma las molestias gástricas y el exceso de acidez, Esta ensalada es un alimento muy recomendable si se padece gastritis.",
+    "image": "../../assets/images/Ensalada de Zanahoria.jpg",
+    "items": 1
+  },
+  {
+    "id": 6,
+    "name": "Ensalada Waldford",
+    "avatar": "../../assets/images/vegan food.jpg",
+    "price": 30.0,
+    "description": "Una ensalada clásica de la gastronomía Americana, en especial de Nueva York. Elaborada con manzanas ácidas troceadas, frutos secos, apio - tubérculo, o julianas de repollo blanco con las hojas o troncos del apio picada y mayonesa o algún aliño basado en la mayonesa.",
+    "image": "../../assets/images/ensalda waldorf.jpg",
+    "items": 1
+  }
+]

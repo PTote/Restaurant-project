@@ -1,0 +1,33 @@
+<!-- <div class="spinner" *ngIf="showSpinner">
+  <mat-spinner></mat-spinner>
+</div> -->
+<div class="container">
+  <mat-card class="example-card" *ngFor="let menu of dataMenu">
+    <mat-card-header>
+      <div mat-card-avatar>
+        <img class="healthy" src="{{ menu.avatar }}" alt="Avatar" />
+      </div>
+      <mat-card-title #name>{{ menu.name }}</mat-card-title>
+      <mat-card-subtitle><span>Q.</span>{{ menu.price }}</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image src="{{ menu.image }}" alt="Photo of a Shiba Inu" />
+    <mat-card-content>
+      <p>
+        {{ menu.description }}
+      </p>
+    </mat-card-content>
+    <i class="fa-solid fa-square-plus" (click)="incrementItems(menu)"></i>
+    <span>{{ items }}</span>
+    <i class="fa-solid fa-square-minus" (click)="decrementItems()"></i>
+    <mat-card-actions>
+      <button
+        mat-raised-button
+        color="primary"
+        id="id_1"
+        (click)="openDialog(menu)"
+      >
+        Agregar al carrito
+      </button>
+    </mat-card-actions>
+  </mat-card>
+</div>

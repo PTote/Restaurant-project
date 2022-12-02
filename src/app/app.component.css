@@ -1,0 +1,8 @@
+.container {
+  padding: 15px;
+  position: absolute;
+}
+
+.toolbar {
+  position: relative;
+}
