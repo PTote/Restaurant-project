@@ -52,7 +52,6 @@ export class CardsComponent implements OnInit {
   incrementItems(menu: any) {
     const up = 1;
     this.items += up;
-    console.log(menu);
   }
 
   decrementItems() {

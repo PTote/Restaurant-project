@@ -41,7 +41,6 @@ export class CarritoComponent implements OnInit {
     })
 
 
-    console.log(filter);
   }
 
   decrementItems(data: any) {
@@ -61,7 +60,6 @@ export class CarritoComponent implements OnInit {
   deleteItems(data: any) {
     const test = this.dataMenuAdd.findIndex(product => product.id === data.id);
     const deleteProduct = this.dataMenuAdd.splice(test, 1)
-    console.log(deleteProduct)
   }
 
   priceTotal() {
@@ -77,7 +75,6 @@ export class CarritoComponent implements OnInit {
     }
 
     this.menuService.getTotalPayment(total);
-    console.log('Total:', total);
 
   }
 

@@ -35,14 +35,11 @@ export class FormComponent implements OnInit {
     this.getPayment();
     const order = this.menuService.getAddToCart();
     this.order = order;
-    console.log(order)
-    // this.test();
   }
 
 
   getPayment() {
     const data = this.menuService.sendTotalPayment();
-    console.log(data)
   }
 
   onSubmit() {
@@ -85,8 +82,8 @@ export class FormComponent implements OnInit {
       this.openModalConfirm();
       this.menuService.setOrderId(docRef.id, date, time);
     }
-    console.log("Document written with ID: ", docRef.id);
-    console.log('Payment Detail:', data)
+    // console.log("Document written with ID: ", docRef.id);
+    // console.log('Payment Detail:', data)
   }
 
 

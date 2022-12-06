@@ -49,7 +49,6 @@ export class MenuService {
   getTotalPayment(data: any) {
     this.totalPayment.push(data)
     // return this.totalPayment = data
-    console.log('Service:', this.totalPayment)
   }
 
   sendTotalPayment() {
