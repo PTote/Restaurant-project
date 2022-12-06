@@ -17,6 +17,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { CarritoComponent } from './components/carrito/carrito.component';
 import { FormComponent } from './components/form/form.component';
+import { ModalConfimComponent } from './components/modal-confim/modal-confim.component';
 
 
 
@@ -28,7 +29,8 @@ import { FormComponent } from './components/form/form.component';
     ToolbarComponent,
     ModalComponent,
     CarritoComponent,
-    FormComponent
+    FormComponent,
+    ModalConfimComponent
   ],
   imports: [
     BrowserModule,

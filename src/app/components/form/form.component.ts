@@ -4,22 +4,8 @@ import { MenuService } from 'src/app/services/menu.service';
 import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 import { collection, addDoc } from 'firebase/firestore'
-
-
-// declare function testeo(): any;
-
-// declare function sendinfo(
-//   name: string | undefined | null,
-//   email: string | undefined | null,
-//   deliveryaddress: string | undefined | null,
-//   phoneNumber: string | undefined | null,
-//   paymentMethod: string | undefined | null,
-//   order: Array<any>,
-//   total: number,
-//   comments: string | undefined | null
-// ): void;
-
-
+import { MatDialog } from '@angular/material/dialog';
+import { ModalConfimComponent } from '../modal-confim/modal-confim.component';
 
 @Component({
   selector: 'app-form',
@@ -42,17 +28,12 @@ export class FormComponent implements OnInit {
   constructor(
     private menuService: MenuService,
     private fb: FormBuilder,
-    // private db: AngularFireDatabase
-  ) {
-
-
-
-
-  }
+    private dialogRef: MatDialog,
+  ) { }
 
   ngOnInit(): void {
     this.getPayment();
-    const order = this.menuService.checkData();
+    const order = this.menuService.getAddToCart();
     this.order = order;
     console.log(order)
     // this.test();
@@ -65,15 +46,10 @@ export class FormComponent implements OnInit {
   }
 
   onSubmit() {
-    this.test();
+    this.sendOrder();
   }
 
-  // addNewUser(name: string = 'kevyn', email: string = '', address: string, phoneNumber: string) {
-  //   this.db.collection().doc(_newId).set({firstName:_fName,lastName:_lName,vipMember:_vip});
-
-  // }
-
-  async test() {
+  async sendOrder() {
     let total: number = 0;
     this.menuService.sendTotalPayment().forEach(data => {
       total = data
@@ -91,9 +67,10 @@ export class FormComponent implements OnInit {
     const app = initializeApp(firebaseConfig);
     const db = getFirestore(app);
 
-    const date = new Date();
-    const orderDate = date.toLocaleString();
-
+    const getdate = new Date();
+    const orderDate = getdate.toLocaleString();
+    const date = getdate.toLocaleDateString(); // 5/12/2020
+    const time = getdate.toLocaleTimeString(); // 6:50:21 PM
 
     const data = {
       orderDate: orderDate,
@@ -104,11 +81,17 @@ export class FormComponent implements OnInit {
 
     const docRef = await addDoc(collection(db, "orders"), data);
     if (docRef) {
-      this.orderForm.reset()
+      this.orderForm.reset();
+      this.openModalConfirm();
+      this.menuService.setOrderId(docRef.id, date, time);
     }
     console.log("Document written with ID: ", docRef.id);
     console.log('Payment Detail:', data)
   }
 
+
+  openModalConfirm() {
+    const dialogRef = this.dialogRef.open(ModalConfimComponent);
+  }
 
 }

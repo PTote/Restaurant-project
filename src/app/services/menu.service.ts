@@ -11,6 +11,9 @@ export class MenuService {
   prepareDataToPay: Array<any> = [];
   originalProduct: Array<any> = [];
   totalPayment: Array<any> = [];
+  dateTime: string = '';
+  orderId: any;
+
 
   constructor(
     private http: HttpClient
@@ -35,7 +38,7 @@ export class MenuService {
     this.originalProduct.push(itemCarrito);
   }
 
-  checkData(): Array<any> {
+  getAddToCart(): Array<any> {
     return this.prepareDataToPay;
   }
 
@@ -51,5 +54,23 @@ export class MenuService {
 
   sendTotalPayment() {
     return this.totalPayment;
+  }
+
+  setOrderId(id: any, date: string, time: string) {
+    this.orderId = {
+      id: id,
+      date: date,
+      time: time
+    }
+  }
+
+  getOrderId() {
+    return this.orderId;
+  };
+
+  clearArrayData() {
+    this.prepareDataToPay = [];
+    this.originalProduct = [];
+    this.totalPayment = [];
   }
 }

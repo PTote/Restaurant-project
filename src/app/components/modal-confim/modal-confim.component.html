@@ -1,0 +1,11 @@
+<h1 mat-dialog-title>Orden procesada</h1>
+<div mat-dialog-content>
+  <span>&#10003;</span>
+  Tu orden con id <span>{{ orderId }}</span> fue procesada exitosamente con
+  fecha <span>{{ date }}</span> a las <span>{{ time }}</span>
+</div>
+<div mat-dialog-actions>
+  <button mat-button mat-dialog-close (click)="clearData()" routerLink="/menu">
+    Aceptar
+  </button>
+</div>

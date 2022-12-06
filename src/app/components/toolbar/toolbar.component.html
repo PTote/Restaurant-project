@@ -4,11 +4,32 @@
     <label for="check" class="checkbtn">
       <i class="fas fa-bars"></i>
     </label>
-    <label class="logo">Logo</label>
-    <ul>
-      <li><a routerLink="/menu">Menú del día</a></li>
-      <li><a routerLink="/carrito">Carrito</a></li>
-      <li><a routerLink="/menu">Sign in</a></li>
+    <label class="logo">
+      <img
+        src="../../../assets/images/logo_-removebg-preview.png"
+        alt="Logo"
+        width="100%"
+        class="imgLogo"
+    /></label>
+    <!-- <label class="logo">
+      <img
+        src="../../../assets/images/logo_-removebg-preview.png"
+        alt="Logo"
+        width="100%"
+      />
+    </label> -->
+    <!-- <div class="logoImg">
+      <img
+        src="../../../assets/images/logo_-removebg-preview.png"
+        alt="Logo"
+        class="imgLogo"
+      />
+    </div> -->
+
+    <ul id="link">
+      <li><a routerLink="/menu" (click)="ocultarMenu()">Menú del día</a></li>
+      <li><a routerLink="/carrito" (click)="ocultarMenu()">Carrito</a></li>
+      <li><a routerLink="/menu" (click)="ocultarMenu()">Sign in</a></li>
     </ul>
   </nav>
 </div>

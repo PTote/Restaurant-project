@@ -25,7 +25,7 @@ export class CarritoComponent implements OnInit {
   }
 
   getData() {
-    const checkData = this.menuService.checkData();
+    const checkData = this.menuService.getAddToCart();
     this.dataMenuAdd = checkData;
   }
 
