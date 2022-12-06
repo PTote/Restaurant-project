@@ -6,5 +6,5 @@ form {
   margin: auto;
   width: 500px;
   border-radius: 30px;
-  border: groove 1em rgb(0, 162, 255);
+  border: groove 1em #e9bf1583;
 }
