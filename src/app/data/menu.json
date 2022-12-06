@@ -12,7 +12,7 @@
     "id": 2,
     "name": "Ensalada Caprese",
     "price": 40.0,
-    "avatar": "assets/images/vegan food.jpg",
+    "avatar": "./assets/images/vegan food.jpg",
     "description": "Una ensalada italiana compuesta de rodajas de tomate y de mozzarella fresca, y hojas de albahaca fresca, de la variedad hoja grande y superhoja, regado con aceite de oliva.",
     "image": "../../assets/images/ensalada caprese.jpg",
     "items": 1
